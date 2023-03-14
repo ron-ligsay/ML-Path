@@ -3,3 +3,9 @@
 # ignore csv files
 csv/
 *.csv
+
+
+#lstm
+lstm/model/
+*.hdf5
+
