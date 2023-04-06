@@ -6,6 +6,6 @@ csv/
 
 
 #lstm
-lstm/model/
+src/mdoels/lstm/model/
 *.hdf5
 
