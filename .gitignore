@@ -11,3 +11,11 @@ src/models/LSTM/model/
 
 #svm
 src/models/svm/3d hyperbola.txt
+
+
+# src/reference
+src/reference/*.docx
+src/reference/*.zip
+*.docx
+*.zip
+*.docx
