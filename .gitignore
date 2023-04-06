@@ -6,6 +6,8 @@ csv/
 
 
 #lstm
-src/mdoels/lstm/model/
+src/models/LSTM/model/
 *.hdf5
 
+#svm
+src/models/svm/3d hyperbola.txt
