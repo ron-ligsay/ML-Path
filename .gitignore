@@ -20,3 +20,4 @@ src/reference/*.zip
 *.zip
 *.docx
 src/references/DAY 1-20221008T045249Z-001/DAY 1/*
+test/rk methods.ipynb
