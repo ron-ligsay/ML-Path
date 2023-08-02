@@ -23,3 +23,5 @@ Built on Tensorflow 2.0 and Keras, and developed with ease-of-use in mind.
 * model fitting view keras.
 * detailed, extensive tutorials on tensorflow.org/recommenders
 
+### 03_tensorflow_recommenders
+dataset [MovieLens 100K Dataset](https://grouplens.org/datasets/movielens/100k/)
