@@ -1,6 +1,20 @@
 # Recommenders
 
 
+## AI Sciences - How to build a Content-Based Recommender System using Python
+link to [How to build a Content-Based Recommender System using Python](https://www.youtube.com/watch?v=ijtxuF_5kEU)
+
+4 types of recommendation systems
+* Demographic Filtering
+* Content-Based Filtering
+* Collaborative Filtering
+* Hybrid Systems
+
+appying td-idf, vectorize, consine similarity
+
+### 
+
+
 
 ## TensorFlow Recommenders
 link to [TensorFlow Recommenders](https://www.tensorflow.org/recommenders)
