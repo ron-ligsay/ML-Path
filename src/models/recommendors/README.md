@@ -1,5 +1,16 @@
 # Recommenders
 
+## Krish Naik - Recommender Systems
+link to [Tutorial 5- Content Based Recommendation System](https://www.youtube.com/watch?v=i4a0Of22QRg)
+
+datasource [tmdb movie metadata](https:/www.kaggle.com/tmdb/tmdb-movie-metadata)
+
+also check others code in https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
+
+### 01_krish_naik
+
+
 
 ## AI Sciences - How to build a Content-Based Recommender System using Python
 link to [How to build a Content-Based Recommender System using Python](https://www.youtube.com/watch?v=ijtxuF_5kEU)
@@ -12,7 +23,7 @@ link to [How to build a Content-Based Recommender System using Python](https://w
 
 appying td-idf, vectorize, consine similarity
 
-### 
+### <filename>
 
 
 
