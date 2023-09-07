@@ -27,3 +27,18 @@ linear vs. non-linear activation functions
 - max(0, x)
 
 ### Deeper Networks
+
+#### Multiple Hidden Layers
+
+#### Representing learning
+* deep networks internally build representations of patters in the data
+* partially replace the need for feature engineering
+* Subsequent layers build increasingly sophisticated representations of raw data
+
+#### Deep Learning
+* modeler doesn't need to specify the interactions
+* neural networks learn the relevant patterns in the data
+* last layer has more complex features
+
+
+### The Need for Optimization
