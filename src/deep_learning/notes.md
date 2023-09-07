@@ -42,3 +42,44 @@ linear vs. non-linear activation functions
 
 
 ### The Need for Optimization
+#### A baseline neural network
+* the more closer to the actual target, the better the model
+* the loss function is the distance between the prediction and the target (error = predicted - actual)
+* changing the weights and biases changes the loss function (to be more acurate)
+
+#### Predictions with multiple points
+* making accurate predictions gets harder with more points
+* at any set of weights, there are many values of the error
+
+#### Loss function
+* aggregate errors in predictions from many data points into single number
+* measure of model's predictive performance
+
+##### Squared error loss function
+* most common loss function
+* sum of squared errors between predictions and actual values
+* total squared error/loss = sum of (predicted - actual)^2
+* mean squared error (MSE) = average of squared errors
+
+Plotting the loss function
+* x-axis: weight 1
+* y-axis: weight 2
+* z-axis: loss function
+
+Loss function
+* lower loss function means a better model
+* goal: find the weights that give the lowest value for the loss function
+
+Gradient Descent
+* imagining you are in a pitch dark field
+* want to find the lowest point
+* feel the ground to see how it slopes
+* take a small step downhill
+* repeat until it is uphill in every 
+
+Gradient Descent Steps
+* start at random point
+* until you are somewhere flat:
+  * find the slope
+  * take a step downhill
+  
