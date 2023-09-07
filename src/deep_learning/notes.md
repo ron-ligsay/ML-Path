@@ -23,7 +23,7 @@
 linear vs. non-linear activation functions
 
 #### ReLu (Rectified Linear Activation)
+- most common activation function
+- max(0, x)
 
-
-
-
+### Deeper Networks
