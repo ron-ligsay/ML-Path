@@ -82,4 +82,23 @@ Gradient Descent Steps
 * until you are somewhere flat:
   * find the slope
   * take a step downhill
-  
+
+* if the slope is positive
+  * going opposite the slope means going  or to lower numbers
+  * subtract the slope from the current 
+  * too big a step might lead us astry
+* solution: learning rate
+  * update each weight by subtracting learning rate * slope
+  * learning rate: controls how large a step we take downhill during gradient descent
+  * too small: takes too long
+  * too large: might not converge
+
+Slope calculation example
+* slope of loss function at a point = 2 * (predicted value - actual value) * input value
+
+* to calculate the  slope for a weight, need to multiply:
+  * slope of the loss function w.r.t value at the node we feed into
+  * the value of the node that feeds into our weight
+  * slope of the activation function w.r.t value we feed into (exisits only for nodes in hidden layers and output layers)
+
+* weight * (slope of loss function w.r.t value at the node we feed into) predicted - actual * (slope of activation function w.r.t value we feed into) input data
