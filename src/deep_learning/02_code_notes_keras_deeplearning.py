@@ -13,3 +13,8 @@ model.add(Dense(100, activation='relu', input_shape=(n_cols,)))
 model.add(Dense(100, activation='relu'))
 model.add(Dense(1))
 
+# Compiling a model
+model.compile(optimizer='adam', loss='mean_squared_error')
+
+# Fitting a model
+model.fit(predictors, target)
