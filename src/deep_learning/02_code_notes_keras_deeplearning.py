@@ -61,3 +61,16 @@ for lr in lr_to_test:
     my_optimizer = SGD(lr=lr)
     model.compile(optimizer=my_optimizer, loss='categorical_crossentropy')
     model.fit(predictors, target)
+
+
+# Model Validation
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+model.fit(predictors, target, validation_split=0.3)
+
+
+# Early Stopping
+from tensorflow.keras.callbacks import EarlyStopping
+
+early_stopping_monitor = EarlyStopping(patience=2)
+
+model.fit(predictors, target, validation_split=0.3, epochs=20, callbacks=[early_stopping_monitor])
