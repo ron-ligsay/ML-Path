@@ -67,3 +67,35 @@
 * layers with more nodes
 * layers with fewer nodes
 * creating a great model requires experimentation
+
+
+# Model Capacity
+* models ability to capture predictive patterns in data
+
+### Overfitting
+* model looks good on training data, doesn't generalize to new data
+
+### Underfitting
+* model is too simple to learn the pattern
+
+**Workflow for optimizing model capacity**
+* start with a small network
+* gradually increase capacity
+* keep increasing capacity until validation score is no longer improving
+
+# Stepping up to images
+using MNIST dataset
+
+Recognizing handwritten digits
+
+# Next Steps
+* start with standard prediction problems on tables of numbers
+* images (with cnn) are common steps
+* text (with rnn) is also common
+* keras.io for excellent documentation
+* GPU provides dramatical speedups in model training times
+* need a CUDA compatible GPU
+* for training on using GPUs in the cloud look [here](https://www.datacamp.com/community/tutorials/deep-learning-jupyter-aws)
+
+
+
