@@ -1,3 +1,4 @@
+### Note: this code is from Datacamp Courses: Introduction to Deep Learning in Python
 # Creating a Keras model
 
 ### Model building steps
@@ -58,3 +59,11 @@
 * single validation score is based on large amount of data, and is reliable
 
 ### Early Stopping
+
+### Experimentation
+* experiment with different architectures
+* more layers
+* fewer layers
+* layers with more nodes
+* layers with fewer nodes
+* creating a great model requires experimentation
