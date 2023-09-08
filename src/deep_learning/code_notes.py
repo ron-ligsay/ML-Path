@@ -57,3 +57,25 @@ hidden_layer_outputs = np.array([node_0_output, node_1_output])
 model_output = (hidden_layer_outputs * weights['output']).sum()
 print(model_output)
 
+# Code to calculate slopes and update weights
+weights = np.array([1,2])
+input_data = np.array([3,4])
+target = 6
+learning_rate = 0.01
+preds = (weights * input_data).sum()
+error = preds - target
+print(error)
+
+# Slope calculation
+gradient = 2 * input_data * error
+print(gradient)
+
+# Update weights
+weights_updated = weights - learning_rate * gradient
+preds_updated = (weights_updated * input_data).sum()
+error_updated = preds_updated - target
+print(error_updated)
+
+# Test
+print("initial weight: " , weights , ", updated: " , weights_updated)
+

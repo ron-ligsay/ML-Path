@@ -102,3 +102,8 @@ Slope calculation example
   * slope of the activation function w.r.t value we feed into (exisits only for nodes in hidden layers and output layers)
 
 * weight * (slope of loss function w.r.t value at the node we feed into) predicted - actual * (slope of activation function w.r.t value we feed into) input data
+
+* if learning rate is 0.01, the new weight would be
+* weight - 0.01 * slope = new_weight (ex: 2 - 0.01 (-24) = 2.24)
+
+
