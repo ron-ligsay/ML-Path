@@ -27,3 +27,8 @@
 * add metrics = ['accuracy'] to compile step for easy-to-understand diagnostics
 * output layer has separate node for each possible outcome, and uses 'softmax' activation function
 
+# Using Models
+* save
+* reload
+* make predictions
+
