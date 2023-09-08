@@ -107,3 +107,35 @@ Slope calculation example
 * weight - 0.01 * slope = new_weight (ex: 2 - 0.01 (-24) = 2.24)
 
 
+### Backpropagation
+* allows gradient descent to update all weights in neural network (by getting gradients for all weights)
+* comes from chain rule of calculus
+* important to understand the process, but you will generally use a library that implements this
+
+##### Backpropagation process
+* tyring to estimate the slope of the loss function w.r.t each weight
+* do forward propagation to calculate predictions and errors
+
+* go back one layer at a time
+* gradient for weight is product of:
+  1. Node value feeding into that weight
+  2. Slope of loss function w.r.t node it feeds into
+  3. Slope of activation function at the node it feeds into
+
+* Need to also keep track of the  slopes of the loss funciton w.r.t nonde values 
+* slope of node values are the sum of the slopes for all weights that come out of them
+
+
+Note:
+* each time you generate predictions using forward propagation, you update the weights using backpropagation
+* backpropagation iteration = forwardpropagation iteration
+
+Q&A:
+If your predictions were all exactly right, and your erros were all exactly 0, the slop of the loss fucntion with respect to your predictions would also be 0. In that circumstance, which of the following statemments would be correct?
+* The updates to all weights in the network would also be 0
+* The updates to all weights in the network would be dependent on the activation functions
+* The updates to all weights in the network would be dependent on the slope of the activation functions
+
+Answer: The updates to all weights in the network would also be 0
+In this situation, the updates to all weights in the network wouldd indeed also be 0.
+
