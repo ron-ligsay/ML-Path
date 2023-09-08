@@ -32,3 +32,20 @@
 * reload
 * make predictions
 
+
+# Model Optimization
+
+### Why optimization is hard
+* simultaneously optimizing 10000s of parameters with complex relationships
+* updates may not improve model meaningfully
+* updates too small (learning rate too low) or too large (learning rate too high)
+
+### Stochastic Gradient Descent (SGD)
+
+
+### The dying neuron problem
+* if a large gradient changes the weights such that the neuron never fires again, the gradient will forever be zero from then on
+
+### Vanishing Gradients
+* occurs when many layers have very small slopes (e.g. due to being on flat part of tanh curve)
+* in deep networks, updates to backprop were close to 0
