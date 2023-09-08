@@ -66,18 +66,18 @@ Plotting the loss function
 * y-axis: weight 2
 * z-axis: loss function
 
-Loss function
+**Loss function**
 * lower loss function means a better model
 * goal: find the weights that give the lowest value for the loss function
 
-Gradient Descent
+**Gradient Descent**
 * imagining you are in a pitch dark field
 * want to find the lowest point
 * feel the ground to see how it slopes
 * take a small step downhill
 * repeat until it is uphill in every 
 
-Gradient Descent Steps
+**Gradient Descent Steps**
 * start at random point
 * until you are somewhere flat:
   * find the slope
@@ -93,7 +93,7 @@ Gradient Descent Steps
   * too small: takes too long
   * too large: might not converge
 
-Slope calculation example
+**Slope calculation example**
 * slope of loss function at a point = 2 * (predicted value - actual value) * input value
 
 * to calculate the  slope for a weight, need to multiply:
@@ -106,6 +106,7 @@ Slope calculation example
 * if learning rate is 0.01, the new weight would be
 * weight - 0.01 * slope = new_weight (ex: 2 - 0.01 (-24) = 2.24)
 
+note: w.r.t = with respect to
 
 ### Backpropagation
 * allows gradient descent to update all weights in neural network (by getting gradients for all weights)
