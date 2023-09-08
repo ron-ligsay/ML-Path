@@ -139,3 +139,24 @@ If your predictions were all exactly right, and your erros were all exactly 0, t
 Answer: The updates to all weights in the network would also be 0
 In this situation, the updates to all weights in the network wouldd indeed also be 0.
 
+***Backpropagation***
+
+Calculating slopes associated with any weight
+* gradients for weight is product of
+  1. Node value feeing into that weight
+  2. Slope of activation funciton for the node being fed into
+  3. Slope of loss function w.r.t output node
+
+***Backpropagation recap***
+* start at some random set of weights
+* use forward propagation to make a prediction
+* use backward propagation to calculate the slope of the loss function w.r.t each weight
+* multiply that slope by the learning rate, and subtract from the current weights
+* keep going with that cycle until we get to a flat part
+
+#### Stochaastic Gradient descent
+* it is common to calculate slops on only a subset of the data (a batch)
+* use a different batch of data to calculate the next update
+* start over from the beginning once all data is used
+* each time through the training data is called an epoch
+* when slopes are calculated on one batch at a time: stochasti gradient descent
