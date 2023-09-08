@@ -1,3 +1,4 @@
+# This codes are from Datacamp courses
 
 # Model Specification
 import numpy as np
@@ -71,6 +72,8 @@ model.fit(predictors, target, validation_split=0.3)
 # Early Stopping
 from tensorflow.keras.callbacks import EarlyStopping
 
+# with patience, the model will not stop until the validation loss has not improved for 2 epochs
 early_stopping_monitor = EarlyStopping(patience=2)
 
+# callbackcs is a list of callbacks to apply during training, it will be called at the end of each epoch
 model.fit(predictors, target, validation_split=0.3, epochs=20, callbacks=[early_stopping_monitor])
