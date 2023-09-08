@@ -19,3 +19,11 @@
 #### Fitting a model
 * applying backpropagation and gradient descent with your data to update the weights
 * scaling data before fitting can ease optimization
+
+
+### Classification 
+* 'categorical_crossentropy' loss function
+* similar to log loss: lower is better
+* add metrics = ['accuracy'] to compile step for easy-to-understand diagnostics
+* output layer has separate node for each possible outcome, and uses 'softmax' activation function
+
