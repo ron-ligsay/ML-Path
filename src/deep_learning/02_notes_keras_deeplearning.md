@@ -49,3 +49,12 @@
 ### Vanishing Gradients
 * occurs when many layers have very small slopes (e.g. due to being on flat part of tanh curve)
 * in deep networks, updates to backprop were close to 0
+
+
+# Model 
+**Validation in deep learning**
+* commonly use validation split rather than cross-validation
+* deep learning widely used on large datasets
+* single validation score is based on large amount of data, and is reliable
+
+### Early Stopping
