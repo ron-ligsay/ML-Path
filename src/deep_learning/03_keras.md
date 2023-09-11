@@ -28,5 +28,18 @@ using functional or sequential API
 **evaluating**
 ```model.evaluate(x,y)```
 
+# Binary Classification
+* **binary classification** - classification task with two possible outcomes
+
+### Using sigmomid function
+* **sigmoid function** - squashes numbers between 0 and 1
+* **sigmoid activation function** - sigmoid function used to calculate the output of a neural network
+* **sigmoid activation layer** - layer that applies sigmoid activation function to the input
+
+neuron output -> sigmoid -> transformed output -> rounded output
 
 
+**Exploring dollar bills**
+You will practice building classification models in Keras with the Banknote Authentication dataset.
+
+Your goal is to distinguish between real and fake dollar bills. In order to do this, the dataset comes with 4 features: variance,skewness,kurtosis and entropy. These features are calculated by applying mathematical operations over the dollar bill images. The labels are found in the dataframe's class column.
