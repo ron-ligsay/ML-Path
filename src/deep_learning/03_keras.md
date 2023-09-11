@@ -10,3 +10,23 @@ Example: classify images of cats and dogs
 * **images -> unstructured data**
 * you don't care about why the network knows it's a cat or a dog
 * you can benefit from cnn
+
+### Coding keras
+using functional or sequential API
+
+
+## Surviving Meteor Strike
+**compiling**
+```model.compile()```
+
+**training**
+```model.fil(x,y,epochs=100)```
+
+**predicting**
+```preds = model.predict()```
+
+**evaluating**
+```model.evaluate(x,y)```
+
+
+
