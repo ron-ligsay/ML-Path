@@ -137,3 +137,6 @@ decoded_imgs = autoencoder.predict(X_test_noise)
 
 # Plot noisy vs decoded images
 compare_plot(X_test_noise, decoded_imgs)
+
+
+

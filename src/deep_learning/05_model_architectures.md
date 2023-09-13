@@ -22,3 +22,14 @@ lower dimensional representation
 
 
 building a simple encoder
+
+
+# Intro to CNNs
+
+Example for object classification, car <br>
+input (image of a car) > feature learning (convolution + relu > pooling > convolution + relu > pooling) > classfication (flatten > fully connected > softmax (bicycle, car, truck, van, ...)) 
+
+##### Convolutional layers
+convolutional layers perform feature learning, we then flatten the outputs into a vector and feed it to a fully connected layer for classification
+
+building a cnn in keras
