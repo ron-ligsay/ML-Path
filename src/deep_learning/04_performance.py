@@ -208,3 +208,144 @@ h2_callback = batchnorm_model.fit(X_train, y_train, validation_data=(X_test,y_te
 
 # Call compare_histories_acc passing in both model histories
 compare_histories_acc(h1_callback, h2_callback)
+
+
+
+# sklearn recap
+
+# import RandomizedSearchCV
+from sklearn.model_selection import RandomizedSearchCV
+
+# instantiate your classifier
+tree = DecisionTreeClassifier()
+
+# Define a series of parameters to look over
+params = {'max_depth': range(3, None), "max_features": range(1, 4), 'min_samples_leaf': range(1, 4)}
+
+# Perform random search with cross validation 
+tree_cv = RandomizedSearchCV(tree, params, cv=5)
+tree_cv.fit(X, y)
+
+# Print the best score and best parameters
+print("Tuned Decision Tree Parameters: {}".format(tree_cv.best_params_))
+
+# using Keras model to build sklearn classifier
+
+# turn a keras model into a sklearn estimator
+
+# Function that creates our Keras model
+def create_model(optimizer='adam', activation='relu'):
+   model = Sequential()
+   model.add(Dense(16, input_shape=(2,), activation=activation))
+   model.add(Dense(1, activation='sigmoid'))
+   model.compile(optimizer=optimizer, loss='binary_crossentropy')
+   return model
+
+# Import sklearn wrapper from keras
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
+
+# Create a model as a sklearn estimator
+model = KerasClassifier(build_fn=create_model, epochs=6, batch_size=16)
+
+# our model now can be use like any other sklearn model
+
+# Cross validation
+
+# import corss_val_score
+from sklearn.model_selection import cross_val_score
+
+# check how your keras model performs with 5 fold crossvalidation
+kfold = cross_val_score(model, X, y, cv=5)
+
+# print the mean accuracy per fold
+print('The mean accuracy was:', kfold.mean())
+
+# print the standard deviation per fold
+print('With a standard deviation of:', kfold.std())
+
+# print the accuracy per fold
+print('The accuracy per fold was:', kfold)
+
+
+# Random Search on Keras Models
+# Define a series of paramenters
+params = dict(optimier=['sgd','adam'], epochs=3, batch_size=[5, 10, 20], actiation=['relu', 'tanh'])
+
+# Create a random search cv and fit it to the data
+random_search = RandomizedSearchCV(model, param_distributions=params, cv=3)
+random_search_results = random_search.fit(X, y)
+
+# print results
+print("Best Score: ", random_search_results.best_score_, "and Best Params: ", random_search_results.best_params_)
+
+# Tuning other hyperparameters
+def create_model(nl=1,nn=256):
+   model = Sequential()
+   model.add(Dense(16, input_shape=(2,), activation='relu'))
+   for i in  range(nl):
+        # layers have nn neurons
+        model.add(Dense(nn, activation='relu'))
+    # end defining and compiling your model
+
+# define parameters, named just like in create_model()
+params = dict(nl=[1,2,9], nn=[128, 256, 1000])
+
+# Repeat the random search... 
+for i in range(3):
+   # Search randomly over the params
+   random_search = RandomizedSearchCV(model, param_distributions=params, cv=3)
+   random_search_results = random_search.fit(X, y)
+   # Print results
+   print("Best: %f using %s" % (random_search_results.best_score_, random_search_results.best_params_))
+
+
+# Exercise
+
+# Preparing a model for tuning
+
+# Creates a model given an activation and learning rate
+def create_model(learning_rate, activation):
+      # Create an Adam optimizer with the given learning rate
+      # opt = Adam(lr = learning_rate)
+      
+      # Create your binary classification model  
+      model = Sequential()
+      model.add(Dense(128, input_shape = (30,), activation = activation))
+      model.add(Dense(256, activation = activation))
+      model.add(Dense(1, activation = 'sigmoid'))
+      
+      # Compile your model with your optimizer, loss, and metrics
+      model.compile(optimizer = opt, loss = 'categorical_crossentropy', metrics = ['accuracy'])
+      return model
+
+# Import KerasClassifier from tensorflow.keras scikit learn wrappers
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
+
+# Create a KerasClassifier
+model = KerasClassifier(build_fn = create_model)
+
+# Define the parameters to try out
+params = {'activation': ['relu', 'tanh'], 'batch_size': [32, 128, 256], 
+          'epochs': [50, 100, 200], 'learning_rate': [0.1, 0.01, 0.001]}
+
+# Create a randomize search cv object passing in the parameters to try
+random_search = RandomizedSearchCV(model, param_distributions = params, cv = KFold(3))
+
+# Running random_search.fit(X,y) would start the search,but it takes too long! 
+show_results()
+
+# Import KerasClassifier from tensorflow.keras wrappers
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
+
+# Create a KerasClassifier
+model = KerasClassifier(build_fn = create_model(learning_rate = 0.001, activation = 'relu'), epochs = 50, 
+             batch_size = 128, verbose = 0)
+
+# Calculate the accuracy score for each fold
+kfolds = cross_val_score(model, X, y, cv = 3)
+
+# Print the mean accuracy
+print('The mean accuracy was:', kfolds.mean())
+
+# Print the accuracy standard deviation
+print('With a standard deviation of:', kfolds.std())

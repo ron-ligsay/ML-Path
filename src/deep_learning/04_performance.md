@@ -55,3 +55,29 @@ standardized sets the mean to 0 and the standard deviation to 1
 * reduces dependence on weight initializations
 * acts as an unintended form of regularization
 * limits internal covariate shift
+
+
+
+## Hyperparameter tuning
+**hyperparameters** - parameters that are not learned by the model, but can be set before training
+
+**Neural network hyperparameters**
+* number of hidden layers
+* number of neurons per layer
+* layer order
+* layer activations
+* batch sizes
+* learning rates
+* optimizers
+* ...
+
+**sklearn recap**
+
+
+**Tips for neural networks hyperparameter tuning**
+* random search is preferred over grid search
+* dont use many epochs
+* use a smaller sample of the dataset
+* play with batch sizes, activations, optimizers and learning rates
+
+Random search in keras
