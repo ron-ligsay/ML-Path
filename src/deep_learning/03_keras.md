@@ -80,6 +80,6 @@ label encoding to one hot encoding
 
 ### Classbacks in  keras
 * **callbacks** - functions that can be applied at certain stages of the training process, such as at the end of each epoch
-* **early stopping** - a callback that terminates training when no improvement is made
+* **early stopping** - a callback that terminates training when no improvement is made, to prevent from overfitting
 * **model checkpoint** - a callback that saves the model's weights after each epoch
 * **history** - the record of training loss values and metrics values at successive epochs as well as validation loss values and validation metrics values
