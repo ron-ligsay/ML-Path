@@ -145,5 +145,5 @@ val_acc = pd.DataFrame(val_acc_per_function)
 # Call plot on the dataframe
 val_acc.plot()
 plt.show()
-
+ 
 # 
