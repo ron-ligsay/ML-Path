@@ -67,3 +67,19 @@ y = to_categorical(df.response)
 
 **one-hot encoding**
 label encoding to one hot encoding
+
+## Multi-label classification
+* **multi-label classification** - classification task with more than two possible outcomes where multiple labels can be true for a single observation
+
+**sigmmoid** - squashes numbers between 0 and 1
+
+**one vs rest** - strategy of fitting one classifier per class and making predictions based on the confidence of each classifier
+
+**An irigation machine**
+
+
+### Classbacks in  keras
+* **callbacks** - functions that can be applied at certain stages of the training process, such as at the end of each epoch
+* **early stopping** - a callback that terminates training when no improvement is made
+* **model checkpoint** - a callback that saves the model's weights after each epoch
+* **history** - the record of training loss values and metrics values at successive epochs as well as validation loss values and validation metrics values
