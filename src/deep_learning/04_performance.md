@@ -44,3 +44,14 @@ Disadvantages
 **normalization (standardization)**
 (data - mean) / standard 
 standardized sets the mean to 0 and the standard deviation to 1
+
+1. this layer (layer before output layer) weights are trained based on the previous layer outputs it receives
+2. but when this layer updates its weights via gradient descent, its outputs are also updates
+3. Batch normalization makes sure that independently of the changes, the input to the next layer are normalized.
+
+**batch normalization advantages**
+* improves gradient flow
+* allow higher learning  rates
+* reduces dependence on weight initializations
+* acts as an unintended form of regularization
+* limits internal covariate shift
