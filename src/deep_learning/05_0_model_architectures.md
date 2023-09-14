@@ -39,3 +39,10 @@ ResNet50 (50 layers) model that performs will in imagenet dataset, that can clas
 Inside a CNN we can check how different filters activate in response to an input image
 
 
+# What could you learn next?
+* go deeper into CNNs
+* go deeper into LSTMs
+* Keras Functional API
+* Models that share layers, models with several branches
+* GANs: Generative Adversarial Networks
+* Deep learning projects
