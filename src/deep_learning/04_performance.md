@@ -81,3 +81,21 @@ standardized sets the mean to 0 and the standard deviation to 1
 * play with batch sizes, activations, optimizers and learning rates
 
 Random search in keras
+
+# Intro to LSTMs
+LSTMs are a type of recurrent neural netowrk
+
+### RNN
+A simple RRN is a neural  network that can use past predictions in order to inder new ones
+
+LSTM neurons are pretty complex, they are actually called units or cells
+
+they learn what to ignore, what to keep and to select the most important pieces of past information.
+
+#### When to use LSTMs
+* image captioning
+* speech to text
+* text translation
+* document summarization
+* test generation
+* musical composition
