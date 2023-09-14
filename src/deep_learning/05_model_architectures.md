@@ -35,3 +35,7 @@ convolutional layers perform feature learning, we then flatten the outputs into 
 building a cnn in keras
 
 ResNet50 (50 layers) model that performs will in imagenet dataset, that can classify images into 1000 categories
+
+Inside a CNN we can check how different filters activate in response to an input image
+
+

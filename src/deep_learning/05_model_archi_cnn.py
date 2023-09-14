@@ -27,3 +27,19 @@ from tensorflow.keras.applications.resnet50 import preprocess_input
 img = image.load_img(img_path, target_size=(224, 224))
 # turn it into an array
 img = image.img_to_array(img)
+# Exapnd the dimensions so that it's understood by our network:
+# img.shape turns from (224, 224, 3) into (1, 224, 224, 3)
+img = np.expand_dims(img, axis=0)
+# pre-process the img in the same way training images were
+img = preprocess_input(img)
+
+# Using the ResNet50 model in Keras
+# Import ResNet50 and decode_predictions from tensorflow.keras.apprications.resnet50
+from tensorflow.keras.applications.resnet50 import ResNet50, decode_predictions
+# Instantiate a ResNet50 model with imagenet weights
+model = ResNet50(weights='imagenet')
+# Predict with ResNet50 on your already processed img
+preds = model.predict(img)
+# Decode predictions and print it
+print('Predicted:', decode_predictions(preds, top=3)[0])
+
