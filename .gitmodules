@@ -1,3 +1,3 @@
 [submodule "ron_datacamp"]
-	path = ron_datacamp
+	path = ./ron_datacamp
 	url = https://github.com/ron-ligsay/ron_datacamp.git
